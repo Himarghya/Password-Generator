@@ -1,0 +1,56 @@
+.Main-container {
+   height:35px;
+   width:70px;
+   background-color: black;
+    border-radius: 35px;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-start;
+}
+.positioning {
+    height:35px;
+    width:70px;
+    border-radius: 35px;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-end;
+    background-color: white;
+}
+
+.circle{
+    height:35px;
+    width:35px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height:35px;
+    width:35px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#image-1{
+    position: relative;
+    left:10px;
+    
+
+}
+.image{
+    z-index: 2;
+}
+#image-2{
+    position: relative;
+    right:8px;
+    
+}
+.body{
+    background-color: black;
+}
