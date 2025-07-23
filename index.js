@@ -5,11 +5,12 @@ const navbar = document.querySelector("#navBar");
 const footer = document.querySelector(".footer");
 const Generator = document.querySelector(".Generator");
 const Length = document.querySelector(".Length");
+const LabelLength = document.querySelector("#length");
 const checkbox = document.querySelector(".Checkboxs");
 const githubProfile = document.querySelector(".github-Profile");
 const body = document.querySelector(".root");    
 const Password = document.querySelector("#Password");
-const GenerateButton = document.querySelector("#Generate");
+
 
 toogel_Switch.addEventListener("click" , () =>{
     toogel_Switch.classList.toggle("positioning");
@@ -32,65 +33,22 @@ const lengthLCA = LowerCaseArry.length;
 const lengthNCA = NumberArry.length;
 const lengthSCA = SymbolArry.length;
 
-const UpperCase = document.querySelector("#UpperCase");
-const LowerCase = document.querySelector("#LowerCase");
+const UpperCase = document.querySelector("#uppercase");
+const LowerCase = document.querySelector("#lowercase");
 const Numbers = document.querySelector("#Numbers");
 const Symbols = document.querySelector("#Symbols");
 
-
-GenerateButton.addEventListener("click", () => {
-   generatePassword(change());
+const GenerateButton = document.querySelector("#Generate");
+LowerCase.addEventListener("click", () => {
+    console.log(LowerCas e.checked);
+    if(LowerCase.checked === true) {
+        GenerateButton.addEventListener("click", ()=>{
+        console.log("Hello world");});
+    }
+    else {
+        console.log("Joker");
+    }
 });
-change();
- 
-function change(){
-    Length.addEventListener("change", (event) => {
-         let TrueValue = event.target.value;
-         Length.innerHTML = `Password-Length: <input type='range' id='length' min='4' max='20' value='${event.target.value}'>` + event.target.value;
-         }); 
-         return TrueValue;
-}
 
-function generatePassword(Value) {
-    checkbox.addEventListener("change", (event) => {
-        if (event.target.checked) {
-            if(event.target.id === "uppercase") {
-                let password = "";
-                for(var i = 0 ; i < Value; i++) {
-                    password += UpperCaseArry[Math.floor(Math.random() * lengthUCA)];
-                }
-                console.log(password);
-                Password.value = password;
-                
-            } else if(event.target.id === "lowercase") {
-                let password = "";
-                for(var i = 0 ; i < Value; i++) {
-                    password += LowerCaseArry[Math.floor(Math.random() * lengthLCA)];
-                }
-                console.log(password);
-                Password.value = password;
-                
-            } else if(event.target.id === "numbers") {
-                let password = "";
-                for(var i = 0 ; i < Value; i++) {
-                    password += NumberArry[Math.floor(Math.random() * lengthNCA)];
-                }
-                console.log(password);
-                Password.value = password;
-                
-            } else if(event.target.id === "symbols") {
-                let password = "";
-                for(var i = 0 ; i < Value; i++) {
-                    password += SymbolArry[Math.floor(Math.random() * lengthSCA)];
-                }
-                console.log(password);
-                Password.value = password;
-            }
-        }
-        else{
-            alert("Please Select a value");
-        }
-    });
 
-}
 

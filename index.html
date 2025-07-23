@@ -44,15 +44,15 @@
             <button id="Copy" class="Button">Copy</button>
         </div>
         <div class="Length">
-            Password-Length: <input type="range" id="length" min="4" max="20" value="4">
+            Password-Length: <input type="range" id="length" min="4" max="20" onclick="myfunction()"><span id="span"></span>
         </div>
         <div class="CheckBox">
             <label class="Checkboxs">
-                <input type="checkbox" id="uppercase"> ABC
-                <input type="checkbox" id="lowercase" > abc
-                <input type="checkbox" id="numbers" > 123
-                <input type="checkbox" id="symbols"> !@#
-                <input type="checkbox" id="spaces"> Exclude duplicate characters
+                <input type="checkbox" class="Check" id="uppercase"><label for="uppercase"> ABC</label>
+                <input type="checkbox" class="Check" id="lowercase" > <label for="lowercase"> abc</label>
+                <input type="checkbox" class="Check" id="numbers" > <label for="numbers"> 123</label>
+                <input type="checkbox" class="Check" id="symbols"><label for="symbols"> !@#</label>
+                <input type="checkbox" class="Check" id="spaces"> <label for="spaces"> Exclude Duplicate Characters</label>
             </label>
         </div>
         <footer class="footer">

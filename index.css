@@ -138,6 +138,7 @@ span{
     border: none;
     padding:5px;
     border-radius: 10px;
+    cursor: pointer;
 }
 #Copy{
     font-size: 2rem;
@@ -146,6 +147,7 @@ span{
     padding:5px;
     border: none;
     border-radius: 10px;
+    cursor: pointer;
 }
 .Length{
     display: flex;
